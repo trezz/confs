@@ -99,8 +99,8 @@ PS2='`%_> '       # secondary prompt, printed when the shell needs more informat
 PS3='?# '         # selection prompt used within a select loop.
 PS4='+%N:%i:%_> ' # the execution trace prompt (setopt xtrace). default: '+%N:%i>'
 
-local prompt_user="${lpurple}%n${std}"
-local prompt_host="${lpurple}%m${std}"
+local prompt_user="${lyellow}%n${std}"
+local prompt_host="${lgreen}%m${std}"
 if [ $UID -eq 0 ]; then
 	prompt_user="${red}%n${std}"
 	prompt_host="${red}%m${std}"
