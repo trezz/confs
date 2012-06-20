@@ -21,7 +21,7 @@ export LS_OPTIONS='-b -h --color=auto'
 export PAGER='less'
 
 # Path
-export PATH="$PATH":/opt/firefox/
+export PATH="$PATH":/opt/jdk1.7.0_05/bin
 
 #-------------------------------------------------------------------------------
 # Aliases

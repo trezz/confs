@@ -285,7 +285,7 @@
 (when (display-graphic-p)               ; if graphic
   (set-background-color "black")
   (set-foreground-color "white")
-  (set-default-font "-misc-fixed-medium-r-normal--13-*-100-100-c-90-iso8859-1")
+;;  (set-default-font "-misc-fixed-medium-r-normal--13-*-100-100-c-90-iso8859-1")
 )
 
 ;;----------------
