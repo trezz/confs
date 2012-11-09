@@ -12,15 +12,19 @@ system=`uname -s` # Get the current system.
 # Personal
 export NAME='vincent'
 export FULLNAME='Vincent Camus'
-export EMAIL='vincent.camus@pulse-ar.com'
+export EMAIL='vincent.camus@ingenico.com'
 
 # Utilities
 # export PAGER='less'
 export EDITOR='vim'                     # for svn
-export LS_OPTIONS='-b -h --color=auto'
+
+
+export LS_OPTIONS="-bhG"
+
 export PAGER='less'
 
 # Path
+export PATH=/opt/local/bin:"$PATH"
 export PATH="$PATH":/opt/jdk1.7.0_05/bin
 
 #-------------------------------------------------------------------------------
