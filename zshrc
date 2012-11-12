@@ -21,6 +21,10 @@ export EDITOR='vim'                     # for svn
 
 export LS_OPTIONS="-bhG"
 
+if [ `uname` = "Linux" ]; then
+	LS_OPTIONS=$LS_OPTIONS" --color"
+fi
+
 export PAGER='less'
 
 # Path
