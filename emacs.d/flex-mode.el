@@ -1,4 +1,4 @@
-; -*- Mode: Emacs-Lisp; -*-
+; -*- Mode: Emacs-Lisp; -*- 
 
 ;  Eric Beuscher
 ;  Tulane University
@@ -10,14 +10,14 @@
 
 (define-derived-mode flex-mode c-mode "Flex"
   "Major mode for editing flex files"
-
+  
   ;; try to set the indentation correctly
   (setq-default c-basic-offset 4)
   (make-variable-buffer-local 'c-basic-offset)
 
   (c-set-offset 'knr-argdecl-intro 0)
   (make-variable-buffer-local 'c-offsets-alist)
-
+  
   ;; remove auto and hungry anything
   (c-toggle-auto-hungry-state -1)
   (c-toggle-auto-state -1)
@@ -32,10 +32,11 @@
   (define-key flex-mode-map [tab] 'flex-indent-command)
 
   (setq comment-start "/*"
-	comment-end "*/"
+					;comment-end "*/"
 	)
   )
 
 (defalias 'flex-indent-command 'c-indent-command)
 
 (provide 'flex-mode)
+
