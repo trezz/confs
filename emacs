@@ -8,6 +8,10 @@
 ; General Options ;
 ;-----------------;
 
+; color scheme
+(set-background-color "black")
+(set-foreground-color "white")
+
 ; define the default load path
 (setq load-path (cons "~/.emacs.d/" load-path))
 
@@ -25,9 +29,9 @@
 (setq-default gdb-many-windows t)       ; better gdb
 
 (when (display-graphic-p)		; if graphic:
-  (scroll-bar-mode nil)			;	no scroll bar
+  (scroll-bar-mode -1)			;	no scroll bar
   (mouse-wheel-mode t)			;	enable mouse wheel
-  (tool-bar-mode nil)			;	no tool bar
+  (tool-bar-mode -1)			;	no tool bar
 )
 
 (menu-bar-mode -1)			; no menu bar
@@ -52,6 +56,8 @@
 	      "\\`\\*gud\\*\\'" 
 	      "\\`\\*locals of.*\\*\\'" 
 	      "\\` ")))
+;; tab means tab, i.e. complete. Not "open this file", stupid.
+(setq ido-confirm-unique-completion t)
 ; if the file doesn't exist, do try to invent one from a transplanar
 ; directory. I just want a new file.
 (setq ido-auto-merge-work-directories-length -1)
