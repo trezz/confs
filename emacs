@@ -8,12 +8,12 @@
 ; General Options ;
 ;-----------------;
 
+; define the default load path
+(setq load-path (cons "~/.emacs.d/" load-path))
+
 ; color scheme
 (set-background-color "black")
 (set-foreground-color "white")
-
-; define the default load path
-(setq load-path (cons "~/.emacs.d/" load-path))
 
 (setq inhibit-startup-message t)	; don't show the GNU splash screen
 (setq frame-title-format "%b")		; title bar show buffer's name
@@ -68,6 +68,18 @@
    "Command to compile current buffer file based on the major mode" t)
 (autoload 'mode-compile-kill "mode-compile"
  "Command to kill a compilation launched by `mode-compile'" t)
+
+; (cc mode) c / c++ mode
+;-----------------------
+(require 'cc-mode)
+(setq c-default-style "k&r"			; Kernighan and Ritchie indent
+      c-basic-offset 3)				; c indentation offset of 3
+(defun my-make-CR-do-indent ()			; auto-indent new line when
+  (define-key c-mode-base-map "\C-m"		; hitting <RET>
+    'c-context-line-break))			
+(add-hook 'c-initialization-hook 
+	  'my-make-CR-do-indent)
+
 
 ; flex
 ;-----
