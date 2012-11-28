@@ -72,13 +72,8 @@
 ; (cc mode) c / c++ mode
 ;-----------------------
 (require 'cc-mode)
-(setq c-default-style "k&r"			; Kernighan and Ritchie indent
+(setq c-default-style "linux"		; linux indentation style
       c-basic-offset 3)				; c indentation offset of 3
-(defun my-make-CR-do-indent ()			; auto-indent new line when
-  (define-key c-mode-base-map "\C-m"		; hitting <RET>
-    'c-context-line-break))			
-(add-hook 'c-initialization-hook 
-	  'my-make-CR-do-indent)
 
 
 ; flex
